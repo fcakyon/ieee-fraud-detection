@@ -10,7 +10,7 @@ SCORING_LIST = ["accuracy", "roc_auc", "f1"]
 XGBOOST_RANDOMSEARCH_PARAMS = {
     "silent": [False],
     "max_depth": sp_randInt(6, 20),
-    "learning_rate": sp_randFloat(),
+    "learning_rate": sp_randFloat(0.01, 0.3),
     "subsample": [0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
     "colsample_bytree": [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
     "colsample_bylevel": [0.4, 0.5, 0.6, 0.7, 0.8, 0.9, 1.0],
@@ -35,7 +35,7 @@ XGBOOST_BAYESSEARCH_PARAMS = {
 
 CATBOOST_RANDOMSEARCH_PARAMS = {
     "silent": [False],
-    "learning_rate": sp_randFloat(),
+    "learning_rate": sp_randFloat(0.01, 0.3),
     "depth": sp_randInt(6, 16),
     "l2_leaf_reg": [3, 1, 5, 10, 100],
     "loss_function": ["Logloss", "CrossEntropy"],
