@@ -13,18 +13,10 @@ def get_data(val_split: float = VAL_SPLIT, apply_label_encoding=False, fillna=Fa
     """
     # Import data:
     print("Importing data...")
-    train_transaction = pd.read_csv(
-        "/home/fatihakyon/dev/inzva/ieee-fraud-detection/data/train_transaction.csv"
-    )
-    train_identity = pd.read_csv(
-        "/home/fatihakyon/dev/inzva/ieee-fraud-detection/data/train_identity.csv"
-    )
-    test_transaction = pd.read_csv(
-        "/home/fatihakyon/dev/inzva/ieee-fraud-detection/data/test_transaction.csv"
-    )
-    test_identity = pd.read_csv(
-        "/home/fatihakyon/dev/inzva/ieee-fraud-detection/data/test_identity.csv"
-    )
+    train_transaction = pd.read_csv("data/train_transaction.csv")
+    train_identity = pd.read_csv("data/train_identity.csv")
+    test_transaction = pd.read_csv("data/test_transaction.csv")
+    test_identity = pd.read_csv("data/test_identity.csv")
 
     # Combine transaction and idendity columns:
     print("Merging transaction and idendity data...")
